@@ -1,0 +1,52 @@
+<!-- Header-->
+<header class=" sticky-top py-5" style="background: rgb(1,17,3);
+background: linear-gradient(90deg, rgba(1,17,3,1) 0%, rgba(0,0,0,1) 23%, rgba(75,0,14,1) 80%, rgba(88,0,0,1) 100%);">
+    <div class="container  px-4 px-lg-5 my-4">
+        <div class="text-center text-danger">
+            <h1 class="display-4 fw-bolder">Serving the best restaurants</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With our most trusted website</p>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</header>
+
+
+
+<section class="py-5">
+
+
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row h-50 gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top  rounded mb-5 mb-md-0" [src]="restaurant.image" alt="..." />
+            </div>
+            <div class="col-md-6">
+                <div class="small mb-1">SKU: {{restaurant._id}}</div>
+                <h1 class="display-5 fw-bolder">{{restaurant.title}}</h1>
+                <div class="fs-5 mb-5">
+                    <span class="fw-bolder">{{restaurant.price}}/-</span>
+
+                </div>
+                <p class="lead">{{restaurant.description}}</p>
+                <div class="d-flex">
+
+                    <button type="button" routerLink="book-form/{{restaurant.id}}"
+                        class="btn btn-outline-dark flex-shrink-0" data-toggle="modal"
+                        data-target="#exampleModalCenter">
+
+                        <!-- <a routerLink="allrestaurant/single/{{restaurant.id}}/book-form/{{restaurant.id}}">book</a> -->
+                        <i class="bi-cart-fill me-1"></i>
+                        book restaurant
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

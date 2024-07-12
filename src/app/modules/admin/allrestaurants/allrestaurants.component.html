@@ -1,0 +1,71 @@
+<!-- Header-->
+
+
+<div class="row">
+
+    <div class="col-3">
+  
+        <app-nav></app-nav>
+  
+    </div>
+    <div class="col-8 m-3 ">
+      
+        <section class="py-5">
+            <div  class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div id="prolist" class="col mb-5">
+                        <div *ngFor="let restaurants of allrestaurant" class="card shadow p-2 col-lg-3 mb-5 text-light ms-5 me-3" style="width: 16rem; ">
+        
+        
+                            <img [src]="restaurants.image" class="card-img-top" alt="..." height="200px" />
+                        
+                            <div class="card-body text-center p-2" style="background-color: black">
+                              <h5 class="card-title" style="font-style: italic; color: white">{{restaurants.title}}</h5>
+                              <p class="card-text text-secondary">{{restaurants.price}}</p>
+                              <p class="card-text text-secondary">{{restaurants.description.slice(0,100)}}....</p>
+        
+                              <div class="d-flex justify-content-around">
+                                <i class="fa-solid fa-trash" (click)="deleteRest(restaurants._id)" style="cursor: pointer; color: rgb(255, 0, 0);"></i>
+                                <i class="fa-solid fa-pen " routerLink="/admin/edit/{{restaurants.id}}" style="cursor: pointer; color: rgb(17, 0, 255);"></i>
+        
+                            </div>
+                            </div>
+        
+                            
+                          </div>
+                    </div>
+        
+        
+                </div>
+        
+                <div class="text-center mb-5">
+        
+                    <div>
+                        <button routerLink="add"  mat-fab color="warn" aria-label="Example icon button with a home icon">
+                            <mat-icon>add</mat-icon>
+                          </button>
+        
+                    </div>
+                    <div>
+                        <h3>Add resturants</h3>
+                    </div>
+            
+                </div>
+        
+            </div>
+        </section>
+        
+  
+  </div>
+
+
+
+
+
+
+
+
+<!-- Section-->
+
+
+<!-- Footer-->

@@ -1,0 +1,104 @@
+
+
+
+<!-- <div id="prolist" class="col">
+    <div *ngFor="let bookings of allbookings | search:searchkey : 'usermail' " class="card shadow m-5 p-1  text-light w-75" style="height: auto;" > -->
+
+
+        <!-- <img [src]="bookings.restaurantimg" class="card-img-top" alt="..." height="200px" /> -->
+    
+        <!-- <div class="card-body text-center p-2" style="background-color: black">
+          <h5 class="card-title" style="font-style: italic; color: white">{{bookings.name}}</h5>
+          <p class="card-text text-secondary">{{bookings.restaurant}}</p>
+          <p class="card-text text-secondary">{{bookings.date}}</p>
+
+          <p class="card-text text-secondary">{{bookings.mobile}}</p>
+
+        </div>
+      </div>
+</div> -->
+
+<div class="row">
+
+  <div class="col-3">
+
+      <app-nav></app-nav>
+
+  </div>
+  <div class="col-9">
+    <div class=" container  justify-content-center">
+
+      <div class="justify-content-center m-3">
+        <div *ngFor="let bookings of allbookings" id="card" class= "row mb-5  border rounded w-100 h-25">
+      
+         <div class="col-lg-3">
+      
+          <img class="w-100 h-100 rounded" [src]="bookings.restaurantimg" alt="....">
+      
+         </div>
+      
+         <div class="col-lg-3">
+      
+          <h1 style="font-size: 100%;">Restaurant Name</h1>
+    
+          <h3>{{bookings.restaurant}}</h3>
+             
+         </div>
+         <div class="col-lg-3">
+            <h1 style="font-size: 100%;">Contact Details</h1>
+          <div>
+      
+            <p>name:{{bookings.name}}</p>
+      
+            <p>email:{{bookings.usermail}}</p>
+      
+            <p>Phone No:{{bookings.mobile}}</p>
+      
+            <p></p>
+      
+          </div>
+      
+      
+      
+         </div>
+         <div class="col-lg-3 text-center">
+    
+          <h1 class="text-center mt-5 " style="font-size: 100%;">Date:{{bookings.date}}</h1>
+    
+    
+    
+    
+         
+    
+         
+        
+      
+         
+      
+      
+          
+      
+      
+      
+        </div>
+      </div>
+    
+    
+    
+    </div>
+
+      
+
+  </div>
+
+
+</div>
+
+
+
+  
+  
+  
+  
+  
+  

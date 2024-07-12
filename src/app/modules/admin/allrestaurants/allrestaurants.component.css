@@ -1,0 +1,16 @@
+#prolist{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+    justify-content: center;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 500px) {
+    #prolist{
+        display: block;
+        justify-content: center;
+        width: 100%;
+    }
+  }

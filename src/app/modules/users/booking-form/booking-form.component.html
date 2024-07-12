@@ -1,0 +1,37 @@
+<form [formGroup]="bookForm" (ngSubmit)="addbook()">
+  <h3>Book your Space</h3>
+
+  <div class="d-md-flex justify-content-center mb-5">
+    <input class="ms-5" type="text" placeholder="Name" formControlName="name">
+    
+    <input class="ms-5" type="text" placeholder="Mobile" formControlName="mobile">
+
+
+
+
+  </div>
+
+ 
+
+  <div class="d-md-flex justify-content-center mb-5">
+
+
+    <input class="ms-5" type="date" placeholder="Date" formControlName="date">
+
+
+
+  </div>
+
+
+
+
+
+
+  <button type="submit" class="text-dark">Book</button>
+
+  <!-- <a routerLink="/users/{{}}/allrestauran">booooo</a> -->
+
+
+
+</form>
+

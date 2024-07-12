@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-dark" style="background: rgb(1,17,3);
+background: linear-gradient(90deg, rgba(1,17,3,1) 0%, rgba(0,0,0,1) 23%, rgba(75,0,14,1) 80%, rgba(88,0,0,1) 100%);">
+    <div class="container px-4 px-lg-5">
+
+        <img src="https://cdn1.vectorstock.com/i/1000x1000/23/40/restaurant-table-reserved-icon-vector-34532340.jpg"
+            style="width: 60px; height: 60px; margin-right: 2%; border-radius: 50%;" alt="">
+        <a class="navbar-brand text-light" routerLink="/users/{{userId}}"> FOODLANE </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"> </li> -->
+
+
+            </ul>
+            <div *ngIf="login" class="d-flex">
+
+
+
+                <button class="btn btn-outline-light" routerLink="/users/{{userId}}/mybookings" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Bookings
+
+                </button>
+
+                <div class="nav-item dropdown text-dark">
+                    <a class="nav-link dropdown-toggle mt-2 ms-5"
+                        style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold;" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+
+                        <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+
+
+
+                    <div class="dropdown-menu bg-dark " style="width: 300px; height: 500px; ">
+                        <div class="m-5 text-center text-light">
+                            <i class="fa-solid fa-user fa-2xl mb-5 " style="color: #ffffff;"></i>
+                            <h1>{{userName}}</h1>
+                            <h2>{{userEmail}}</h2>
+                            <a (click)="logout()">
+                                <h2>LOG OUT</h2>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+        <div *ngIf="!login" class="mt-2"><a style="text-decoration: none; color: rgb(255, 255, 255); font-weight: bold;"
+            routerLink="/login"><i class="ms-5 fa-solid fa-right-to-bracket fa-2xl"
+                style="color: #ffffff;"></i>LogIn</a></div>
+         </div>
+    </div>
+</nav>

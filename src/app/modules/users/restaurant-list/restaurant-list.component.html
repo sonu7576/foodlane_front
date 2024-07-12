@@ -1,0 +1,54 @@
+<!-- Header-->
+<header class=" sticky-top py-5" style="background: rgb(1,17,3);
+background: linear-gradient(90deg, rgba(1,17,3,1) 0%, rgba(0,0,0,1) 23%, rgba(75,0,14,1) 80%, rgba(88,0,0,1) 100%);">
+    <div class="container  px-4 px-lg-5 my-4">
+        <div class="text-center text-danger">
+            <h1 class="display-4 fw-bolder">Serving the best restaurants</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With our most trusted website</p>
+        </div>
+
+       
+
+
+
+    </div>
+
+    
+    <div class="header">
+        <form class="search">
+          <input class="input" [(ngModel)]="searchkey" name="search" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+
+</header>
+
+
+
+<!-- <div class="mt-5 d-flex justify-content-center">
+    <input class="me-2 w-50 text-dark"  [(ngModel)]="searchkey" name="search" type="text" placeholder="Search" aria-label="Search">
+</div> -->
+
+
+<!-- Section-->
+<p style="font-size: 80px; color: grey; text-align: center; margin-top: 200px;">{{error.status}}<span class="ms-5"> {{error.statusText}} </span></p>
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+            <div *ngFor="let restaurants of allrestaurant | search: searchkey : 'title'" class="col mb-4">
+                <div class="card shadow-sm h-100" style="cursor: pointer;  " routerLink="single/{{restaurants.id}}">
+                    <img [src]="restaurants.image" class="card-img-top" alt="Restaurant Image" style="height: 200px; object-fit: cover;">
+                    <div class="card-body" style="background-color: black;">
+                        <h5 class="card-title text-light">{{ restaurants.title }}</h5>
+                        <p class="card-text text-secondary">{{restaurants.description.slice(0,25)}}....</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer-->

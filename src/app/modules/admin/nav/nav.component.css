@@ -1,0 +1,19 @@
+
+.main{
+    background-color: grey;
+}
+
+
+.sidebtn{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 25px;
+  cursor: pointer;
+  height: 40px;
+  background-color: rgb(105, 0, 0);
+
+}

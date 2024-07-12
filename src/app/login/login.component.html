@@ -1,0 +1,22 @@
+
+<form [formGroup]="loginform" (ngSubmit)="login()" >
+    <h3>Login Here</h3>
+
+    <label for="email">Email</label>
+    <input type="email" placeholder="email" formControlName="email" >
+    <!-- email validation error -->
+
+    <div *ngIf="loginform.get('email')?.errors&&loginform.get('email')?.touched" class="fw-bolder text-danger">Invalid email</div>
+
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" formControlName="password" >
+    <div *ngIf="loginform.get('password')?.errors&&loginform.get('password')?.touched" class="fw-bolder text-danger">Invalid password</div>
+
+    <button type="submit" class="text-light" >Log In</button>
+    <div>
+
+        <p class="text">don't have an account please <a routerLink="/register">Sign_up</a> </p>
+      
+    </div>
+</form>

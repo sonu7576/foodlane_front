@@ -1,0 +1,29 @@
+
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <h3>Register Here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="username" formControlName="username" >
+
+    <!-- validation err -->
+    <div *ngIf="registerForm.get('username')?.errors&&registerForm.get('username')?.touched" class="fw-bolder text-danger">Invalid username</div>
+
+
+    <label for="email">Email</label>
+    <input type="email" placeholder="Email" formControlName="email" >
+    <!-- email validation error -->
+
+    <div *ngIf="registerForm.get('email')?.errors&&registerForm.get('email')?.touched" class="fw-bolder text-danger">Invalid email</div>
+
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" formControlName="password" >
+    <div *ngIf="registerForm.get('password')?.errors&&registerForm.get('password')?.touched" class="fw-bolder text-danger">Invalid password</div>
+
+    <button type="submit" class="text-light" >Register</button>
+    <div>
+
+        <p class="text">you have an account please <a routerLink="/login">Sign_in</a> </p>
+      
+    </div>
+</form>
