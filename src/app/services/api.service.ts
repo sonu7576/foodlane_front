@@ -49,14 +49,7 @@ deletRest=(_id:any)=>{
    return this.http.post(`${this.server_url}/user/register`,user)
   }
 
-  // get user
-
   
-  // get_idSingleuser=(userid:any)=>{
-  //   return this.http.get(`${this.server_url}/user/single/${userid}`)
-  // }
-
-
 
   getAlluser=()=>{
 
@@ -100,6 +93,9 @@ deletRest=(_id:any)=>{
     return this.http.delete(`${this.server_url}/deletebook/${_id}`)
 
   }
+
+
+  
 
 
  

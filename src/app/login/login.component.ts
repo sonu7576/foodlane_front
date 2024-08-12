@@ -24,29 +24,16 @@ export class LoginComponent {
 
   userName:any={}
 
-
-  
-
-
-
   constructor(private fb:FormBuilder, private api:ApiService, private route:Router){}
-
-
-
 
 
   login(){
     if (this.loginform.valid) {
     const email=this.loginform.value.email
     const password=this.loginform.value.password
-
-    
-  
-
+   
     // alert (`${username} ${email} ${password}`)
     console.log(` ${email} ${password} `);
-
-    
 
     const reqbody={email,password}
 
@@ -60,11 +47,7 @@ export class LoginComponent {
 
         this.useremail=res.existingUser.email
 
-        this.userName=res.existingUser.username
-
-
-
-        
+        this.userName=res.existingUser.username   
 
         console.log(this.singleuser);
 
@@ -75,11 +58,6 @@ export class LoginComponent {
         localStorage.setItem("userName",this.userName)
 
         this.route.navigateByUrl(`/users/${this.singleuser}`)
-
-
-        
-
-
         
       },error:(err:any)=>{
         console.log(err);

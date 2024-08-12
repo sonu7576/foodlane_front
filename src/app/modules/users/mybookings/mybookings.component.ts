@@ -29,16 +29,9 @@ export class MybookingsComponent implements OnInit{
 
 
     
-    this.searchkey= localStorage.getItem("usermail")
+    this.searchkey= localStorage.getItem("usermail")  
 
-    
-    
-
-      this.getAllbookings()
-
-      
-
-     
+      this.getAllbookings()    
     
 
 
@@ -55,28 +48,16 @@ export class MybookingsComponent implements OnInit{
         console.log(res);
         
 
-        this.allbookings=res
-
-
-        
+        this.allbookings=res       
 
       },
       error:(err:any)=>{
 
         console.log(err);
         
-
       }
 
     })
-    
-    
-
-
-   
-    
-
-
 
   }
 
